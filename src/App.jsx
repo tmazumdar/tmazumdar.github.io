@@ -2,13 +2,14 @@ import {
     Layout,
     Space,
 } from 'antd';
+import FooterSection from './components/FooterSection.jsx';
 import HeaderSection from './components/HeaderSection.jsx';
 import LeftSider from './components/LeftSider.jsx';
 import ResumeSection from './components/ResumeSection.jsx';
 import WorkTimeline from './components/WorkTimeline.jsx';
 import './App.css'
 
-const { Footer, Content } = Layout;
+const { Content } = Layout;
 
 function App() {
 
@@ -19,11 +20,7 @@ function App() {
         color: '#fff',
         backgroundColor: 'darkgray',
     };
-    const footerStyle = {
-        textAlign: 'center',
-        color: '#fff',
-        backgroundColor: 'gray',
-    };
+
     const layoutStyle = {
         borderRadius: 4,
         overflow: 'hidden',
@@ -44,7 +41,7 @@ function App() {
                         </Space>
                     </div>
                 </Content>
-                <Footer style={footerStyle}>TM Copyright 2024</Footer>
+                <FooterSection></FooterSection>
             </Layout>
         </Layout>
     )
