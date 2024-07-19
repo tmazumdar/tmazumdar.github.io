@@ -7,36 +7,26 @@ import {
     Typography,
 } from 'antd'
 import {
-    FileSearchOutlined,
     DownloadOutlined,
+    FileSearchOutlined,
+    GithubOutlined,
+    LinkedinOutlined,
 } from '@ant-design/icons';
-import WorkTimeline from './WorkTimeline.jsx';
+import HeaderComponent from './components/Header.jsx';
+import LeftSider from './components/LeftSider.jsx';
+import WorkTimeline from './components/WorkTimeline.jsx';
 import './App.css'
 
-const { Header, Footer, Sider, Content } = Layout;
-const { Text } = Typography;
+const { Footer, Content } = Layout;
 
 function App() {
-    const headerStyle = {
-        textAlign: 'center',
-        color: '#fff',
-        height: 64,
-        paddingInline: 48,
-        lineHeight: '64px',
-        backgroundColor: 'gray',
-    };
+
     const contentStyle = {
         textAlign: 'center',
         height: '85vh',
         lineHeight: '120px',
         color: '#fff',
         backgroundColor: 'darkgray',
-    };
-    const siderStyle = {
-        textAlign: 'center',
-        lineHeight: '120px',
-        color: '#fff',
-        backgroundColor: 'black',
     };
     const footerStyle = {
         textAlign: 'center',
@@ -49,37 +39,16 @@ function App() {
         width: '100%',
         maxWidth: '100%',
     };
-    const boxStyle = {
-        width: '100%',
-        height: 120,
-        borderRadius: 6,
-        border: '1px solid lightgray',
-    };
+
     return (
         <Layout style={layoutStyle}>
-            <Sider width="25%" style={siderStyle}>
-                <div style={{ padding: "20px" }}>
-                    <Text
-                        strong
-                        style={{
-                            margin: 0,
-                            color: "white",
-                            fontSize: 32
-                        }}
-                    >
-                        Hi there!<br />
-                        I'm Tahsin...
-                    </Text>
-                </div>
-            </Sider>
+            <LeftSider></LeftSider>
             <Layout>
-                <Header style={headerStyle}>
-                    Welcome to my website
-                </Header>
+                <HeaderComponent></HeaderComponent>
                 <Content style={contentStyle}>
                     <div className="card">
                         <Space direction="vertical">
-                            <Card title="My Resume" size="small">
+                            <Card title="My Resume">
                                 <Space>
                                     <Button href="https://tmazumdar.github.io/resume">
                                         <FileSearchOutlined />
@@ -91,7 +60,7 @@ function App() {
                                     </Button>
                                 </Space>
                             </Card>
-                            <Card>
+                            <Card title="My Experience">
                                 <Flex gap="middle" align="start" vertical>
                                     <WorkTimeline></WorkTimeline>
                                 </Flex>
