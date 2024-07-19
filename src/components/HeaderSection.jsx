@@ -6,7 +6,7 @@ import {
 
 const { Header } = Layout;
 
-function HeaderComponent() {
+function HeaderSection() {
     const headerStyle = {
         textAlign: 'center',
         color: '#fff',
@@ -29,4 +29,4 @@ function HeaderComponent() {
     );
 };
 
-export default HeaderComponent;
+export default HeaderSection;

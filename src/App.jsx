@@ -1,19 +1,10 @@
 import {
-    Button,
-    Card,
-    Flex,
     Layout,
     Space,
-    Typography,
-} from 'antd'
-import {
-    DownloadOutlined,
-    FileSearchOutlined,
-    GithubOutlined,
-    LinkedinOutlined,
-} from '@ant-design/icons';
-import HeaderComponent from './components/Header.jsx';
+} from 'antd';
+import HeaderSection from './components/HeaderSection.jsx';
 import LeftSider from './components/LeftSider.jsx';
+import ResumeSection from './components/ResumeSection.jsx';
 import WorkTimeline from './components/WorkTimeline.jsx';
 import './App.css'
 
@@ -44,27 +35,12 @@ function App() {
         <Layout style={layoutStyle}>
             <LeftSider></LeftSider>
             <Layout>
-                <HeaderComponent></HeaderComponent>
+                <HeaderSection></HeaderSection>
                 <Content style={contentStyle}>
                     <div className="card">
                         <Space direction="vertical">
-                            <Card title="My Resume">
-                                <Space>
-                                    <Button href="https://tmazumdar.github.io/resume">
-                                        <FileSearchOutlined />
-                                        View
-                                    </Button>
-                                    <Button href="files/TM-5S2.pdf" download>
-                                        <DownloadOutlined />
-                                        Download
-                                    </Button>
-                                </Space>
-                            </Card>
-                            <Card title="My Experience">
-                                <Flex gap="middle" align="start" vertical>
-                                    <WorkTimeline></WorkTimeline>
-                                </Flex>
-                            </Card>
+                            <ResumeSection></ResumeSection>
+                            <WorkTimeline></WorkTimeline>
                         </Space>
                     </div>
                 </Content>
