@@ -1,10 +1,22 @@
-import { useState } from 'react'
-import { Layout, Card, Button, Flex } from 'antd'
-const { Header, Footer, Sider, Content } = Layout;
+import {
+    Button,
+    Card,
+    Flex,
+    Layout,
+    Space,
+    Typography,
+} from 'antd'
+import {
+    FileSearchOutlined,
+    DownloadOutlined,
+} from '@ant-design/icons';
+import WorkTimeline from './WorkTimeline.jsx';
 import './App.css'
 
+const { Header, Footer, Sider, Content } = Layout;
+const { Text } = Typography;
+
 function App() {
-    const [count, setCount] = useState(0)
     const headerStyle = {
         textAlign: 'center',
         color: '#fff',
@@ -15,7 +27,7 @@ function App() {
     };
     const contentStyle = {
         textAlign: 'center',
-        height: '80vh',
+        height: '85vh',
         lineHeight: '120px',
         color: '#fff',
         backgroundColor: 'darkgray',
@@ -32,23 +44,32 @@ function App() {
         backgroundColor: 'gray',
     };
     const layoutStyle = {
-        borderRadius: 8,
+        borderRadius: 4,
         overflow: 'hidden',
-        width: 'calc(100% - 8px)',
-        maxWidth: 'calc(100% - 8px)',
+        width: '100%',
+        maxWidth: '100%',
     };
     const boxStyle = {
         width: '100%',
         height: 120,
         borderRadius: 6,
-        border: '1px solid #40a9ff',
+        border: '1px solid lightgray',
     };
     return (
         <Layout style={layoutStyle}>
             <Sider width="25%" style={siderStyle}>
                 <div style={{ padding: "20px" }}>
-                    Hi there!<br />
-                    I'm Tahsin...
+                    <Text
+                        strong
+                        style={{
+                            margin: 0,
+                            color: "white",
+                            fontSize: 32
+                        }}
+                    >
+                        Hi there!<br />
+                        I'm Tahsin...
+                    </Text>
                 </div>
             </Sider>
             <Layout>
@@ -57,26 +78,31 @@ function App() {
                 </Header>
                 <Content style={contentStyle}>
                     <div className="card">
-                        <Card> My Resume
-                            <Flex>
-                            </Flex>
-                            <Flex gap="middle" align="start" vertical>
-                                <Flex style={boxStyle} justify={"space-evenly"} align={"center"}>
-                                    <a href="https://tmazumdar.github.io/resume">
+                        <Space direction="vertical">
+                            <Card title="My Resume" size="small">
+                                <Space>
+                                    <Button href="https://tmazumdar.github.io/resume">
+                                        <FileSearchOutlined />
                                         View
-                                    </a>
-                                    <a href="files/TM-5S2.pdf" download>
+                                    </Button>
+                                    <Button href="files/TM-5S2.pdf" download>
+                                        <DownloadOutlined />
                                         Download
-                                    </a>
+                                    </Button>
+                                </Space>
+                            </Card>
+                            <Card>
+                                <Flex gap="middle" align="start" vertical>
+                                    <WorkTimeline></WorkTimeline>
                                 </Flex>
-                            </Flex>
-                        </Card>
+                            </Card>
+                        </Space>
                     </div>
                 </Content>
                 <Footer style={footerStyle}>TM Copyright 2024</Footer>
             </Layout>
         </Layout>
     )
-}
+};
 
-export default App
+export default App;
