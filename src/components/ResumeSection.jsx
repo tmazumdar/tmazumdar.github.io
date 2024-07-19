@@ -25,7 +25,7 @@ const contentList = {
                 <FileSearchOutlined />
                 View
             </a>
-            <a href="files/TM-R.docx" download>
+            <a href="./files/TM-R.docx" download>
                 <DownloadOutlined />
                 Download
             </a>
@@ -36,7 +36,7 @@ const contentList = {
                 <FileSearchOutlined />
                 View
             </Button>
-            <Button href="files/TM-5S2.pdf" download>
+            <Button href="./files/TM-5S2.pdf" download>
                 <DownloadOutlined />
                 Download
             </Button>
