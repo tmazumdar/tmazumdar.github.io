@@ -1,40 +1,65 @@
-import { ClockCircleOutlined } from '@ant-design/icons';
+import {
+    ClockCircleOutlined,
+    RocketTwoTone,
+} from '@ant-design/icons';
 import { Card, Timeline } from 'antd';
+const { Item } = Timeline;
+
+const items = [{
+    children: 'Started Freelancing',
+    label: 'Jan 2024',
+},
+{
+    children: 'Started working at Yelp',
+    label: '2021',
+    color: 'green'
+},
+{
+    children: 'Started working at MAK Consulting Group',
+    label: '2016',
+    color: 'green'
+},
+{
+    children: 'Started work at ONE-EIGHTY CORP',
+    label: 'June 2012',
+    color: 'green'
+},
+{
+    children: 'Graduated from University of Waterloo',
+    label: 'April 2012',
+},
+{
+    children: 'Started BASc in EE',
+    label: '2007',
+    dot: (
+        <ClockCircleOutlined style={{ fontSize: '16px' }} />
+    ),
+},
+{
+    children: 'Moved to Canada',
+    label: '2007',
+    dot: (
+        <RocketTwoTone />
+    ),
+},
+{
+    children: 'Taught O-level subjects as home tutor',
+    label: '2005-06',
+    color: 'green'
+},
+];
+
+var reversedItems = items.reverse();
 
 function WorkTimeline() {
     return (
-        <Card title="My Experience">
-            <Timeline mode="alternate">
-                <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
-                <Timeline.Item color="green">Solve initial network problems 2015-09-01</Timeline.Item>
-                <Timeline.Item
-                    dot={
-                        <ClockCircleOutlined
-                            style={{
-                                fontSize: '16px',
-                            }}
-                        />
-                    }
-                >
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                    beatae vitae dicta sunt explicabo.
-                </Timeline.Item>
-                <Timeline.Item color="red">Network problems being solved 2015-09-01</Timeline.Item>
-                <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
-                <Timeline.Item
-                    dot={
-                        <ClockCircleOutlined
-                            style={{
-                                fontSize: '16px',
-                            }}
-                        />
-                    }
-                >
-                    Technical testing 2015-09-01
-                </Timeline.Item>
-            </Timeline>
-        </Card >
+        <Card style={{width:"70vw"} }>
+            <Timeline
+                pending="Looking for a new role.."
+                reverse={true}
+                mode="left"
+                items={reversedItems} />
+        </Card>
     );
 };
 

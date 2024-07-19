@@ -16,7 +16,6 @@ function App() {
     const contentStyle = {
         textAlign: 'center',
         height: '85vh',
-        lineHeight: '120px',
         color: '#fff',
         backgroundColor: 'darkgray',
     };
@@ -34,7 +33,7 @@ function App() {
             <Layout>
                 <HeaderSection></HeaderSection>
                 <Content style={contentStyle}>
-                    <div className="card">
+                    <div className="">
                         <Space direction="vertical">
                             <ResumeSection></ResumeSection>
                             <WorkTimeline></WorkTimeline>
