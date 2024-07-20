@@ -21,14 +21,14 @@ const tabList = [
 const contentList = {
     tab1:
         <Space>
-            <a href="https://docs.google.com/document/d/1ePpkumoyrnXwdIs4CazE6AxKMF0ma8O-2SiPZzjyBeQ/edit?usp=sharing">
+            <Button href="https://docs.google.com/document/d/1ePpkumoyrnXwdIs4CazE6AxKMF0ma8O-2SiPZzjyBeQ/edit?usp=sharing">
                 <FileSearchOutlined />
                 View
-            </a>
-            <a href="./files/TM-R.docx" download>
+            </Button>
+            <Button href="TM-R.docx" download>
                 <DownloadOutlined />
                 Download
-            </a>
+            </Button>
         </Space>,
     tab2:
         <Space>
@@ -36,7 +36,7 @@ const contentList = {
                 <FileSearchOutlined />
                 View
             </Button>
-            <Button href="./files/TM-5S2.pdf" download>
+            <Button href="TM-5S2.pdf" download>
                 <DownloadOutlined />
                 Download
             </Button>
