@@ -15,7 +15,7 @@ const items = [{
     ),
 },
 {
-    children: 'Started work at Yelp',
+    children: 'Joined Yelp',
     label: 'August 2021',
     color: 'red',
     dot: (
@@ -23,7 +23,7 @@ const items = [{
     ),
 },
 {
-    children: 'Started work at MAK Consulting Group',
+    children: 'Joined MAK Consulting Group',
     label: 'June 2016',
     color: 'blue',
     dot: (
@@ -31,7 +31,7 @@ const items = [{
     ),
 },
 {
-    children: 'Started work at CDK Global',
+    children: 'Joined CDK Global',
     label: 'June 2012',
     color: 'black',
     dot: (
