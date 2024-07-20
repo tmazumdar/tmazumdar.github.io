@@ -32,7 +32,7 @@ const contentList = {
         </Space>,
     tab2:
         <Space>
-            <Button href="https://tmazumdar.github.io/resume">
+            <Button href="https://drive.google.com/file/d/1yhvB8RX_XoUEb-1ScqmyC-Rx2m6m5h-V/view?usp=sharing">
                 <FileSearchOutlined />
                 View
             </Button>
