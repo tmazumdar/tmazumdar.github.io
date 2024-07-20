@@ -52,9 +52,6 @@ function ResumeSection() {
 
     return (
         <Card
-            style={{
-                width: '100%',
-            }}
             title="My Resume"
             tabList={tabList}
             activeTabKey={activeTabKey1}
