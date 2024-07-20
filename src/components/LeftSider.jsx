@@ -16,7 +16,7 @@ function LeftSider() {
     };
 
     return (
-        <Sider width="25vw" style={siderStyle}>
+        <Sider width="25vw" breakpoint="md" collapsedWidth="0" style={siderStyle}>
             <Text
                 strong
                 style={{
