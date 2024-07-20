@@ -39,7 +39,7 @@ function LeftSider() {
                 I'm Tahsin
             </Text>
             <br />
-            <Avatar src="./src/assets/tm-avatar.png" shape="square" size={64} />
+            <Avatar src="assets/tm-avatar.png" shape="square" size={64} />
             <br />
             <Text
                 strong
