@@ -1,17 +1,18 @@
 import React from 'react';
-import { Button, Card, Drawer, Flex, Timeline, theme } from 'antd';
+import { Button, Card, Drawer, Flex, Grid, Timeline, theme } from 'antd';
 import {
     ClockCircleOutlined,
     LaptopOutlined,
     RocketTwoTone,
     ToolOutlined,
 } from '@ant-design/icons';
-import getExperience from '../data/experience.js'
+import getExperience from '../data/experience.js';
+
 const { useState } = React;
-
-
+const { useBreakpoint } = Grid;
 
 function WorkTimeline() {
+    const screens = useBreakpoint();
     const [open, setOpen] = useState(false);
     const [drawer, setDrawer] = useState({});
     const { token } = theme.useToken();
@@ -111,8 +112,8 @@ function WorkTimeline() {
         )
     };
 
-    return (
-        <Card style={{ width: "70vw" }} size="small" title="My Experience">
+    const getTimelineContent = () => {
+        return (
             <div style={containerStyle}>
                 <Timeline
                     pending="Looking for a new role.."
@@ -132,7 +133,21 @@ function WorkTimeline() {
                     <p>{drawer.description}</p>
                 </Drawer>
             </div>
-        </Card>
+        );
+    };
+
+    return (
+        <>
+            {screens.lg ?
+                <Card style={{ width: "70vw" }} size="small" title="My Experience">
+                    {getTimelineContent()}
+                </Card> :
+                <Card style={{ width: "90vw" }} size="small" title="My Experience">
+                    {getTimelineContent()}
+                </Card>
+            }
+
+        </>
     );
 };
 

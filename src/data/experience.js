@@ -17,8 +17,8 @@
             title: "Senior Software Engineer",
             time: "August 2021 - January 2024",
             description: `I was a senior enginer on the Market Fit (Growth) team at Yelp.
-            The role involved running experiments to analyze user activity metrics
-            (e.g. page views, clicks) on Yelp's website.` + "\n" +`
+            The role involved leading projects, experimenting on user activity metrics
+            (e.g. page views, clicks) on Yelp's website.
             I mentored junior engineers with code reviews, 1-on-1s and feedback during design &
             implementation
             I also got to work with Python micro-services which was a shift in tech stack from my prior experiences`,
@@ -30,9 +30,10 @@
             drawer: {
                 title: "Programmer Analyst at MAK Consulting",
                 time: "June 2016 - July 2021",
-                description: `I was an early-stage engineer at a startup developing manufacturing software
-                for their clients using .NET/C# and AngularJS framework.
-                We used Web API, EntityFramework 5, LINQ & SQL stored procedures for the back-end.
+                description: `I worked at a startup developing manufacturing software
+                for factories.
+                We used AngularJS for frontend, and .NET/C#, Web API, EntityFramework 5,
+                LINQ & SQL stored procedures for the back-end.
                 I also got experience with Powershell scripting for automating CI/CD,
                 and debugging PLC interfaces via OPC protocol and Kepware`,
                 web: "www.makcg.com"
@@ -44,8 +45,7 @@
                 title: "Software Engineer at CDK Global",
                 time: "June 2012 - April 2016",
                 description: `My first job was at ONE-EIGHTY CORP which was later acquired by CDK.
-                During my time there, I led a data integration project with BMW, which involved
-                client communication, project coordination, software development, e2e testing and piloting go-live
+                During my time, I led a customer data integration project with BMW.
                 I gained experience building communication layer with .NET, C#, WCF and SOAP to facilitate XML
                 based communication between services.`,
                 web: "www.cdkglobal.com"
