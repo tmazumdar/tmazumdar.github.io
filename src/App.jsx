@@ -3,7 +3,6 @@ import {
     Space,
 } from 'antd';
 import FooterSection from './components/FooterSection.jsx';
-import HeaderSection from './components/HeaderSection.jsx';
 import LeftSider from './components/LeftSider.jsx';
 import ResumeSection from './components/ResumeSection.jsx';
 import SkillsSection from './components/SkillsSection.jsx';
