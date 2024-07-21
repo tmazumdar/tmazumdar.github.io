@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Drawer, Flex, Grid, Timeline, theme } from 'antd';
+import { Button, Card, Drawer, Grid, Timeline, theme } from 'antd';
 import {
     ClockCircleOutlined,
     LaptopOutlined,
@@ -11,7 +11,7 @@ import getExperience from '../data/experience.js';
 const { useState } = React;
 const { useBreakpoint } = Grid;
 
-function WorkTimeline() {
+function WorkTimeline({ siderCollapsed }) {
     const screens = useBreakpoint();
     const [open, setOpen] = useState(false);
     const [drawer, setDrawer] = useState({});
@@ -21,6 +21,7 @@ function WorkTimeline() {
         position: 'relative',
         /*height: 200,*/
         paddingTop: 20,
+        paddingLeft: 10,
         overflow: 'hidden',
         borderRadius: token.borderRadiusLG,
     };
@@ -47,46 +48,46 @@ function WorkTimeline() {
         const items = {
             "FREE": {
                 children: getItemButton(id),
-                label: 'January 2024',
+                label: screens.lg ? 'January 2024' : null,
                 color: 'green',
                 dot: <LaptopOutlined />,
             },
             "YELP": {
                 children: getItemButton(id),
-                label: 'August 2021',
+                label: screens.lg ? 'August 2021' : null,
                 color: 'red',
                 dot: <LaptopOutlined />,
             },
             "MAK": {
                 children: getItemButton(id),
-                label: 'June 2016',
+                label: screens.lg ? 'June 2016' : null,
                 color: 'blue',
                 dot: <LaptopOutlined />,
             },
             "CDK": {
                 children: getItemButton(id),
-                label: 'June 2012',
+                label: screens.lg ? 'June 2012' : null,
                 color: 'black',
                 dot: <LaptopOutlined />,
             },
             "UW": {
                 children: getItemButton(id),
-                label: 'April 2012',
+                label: screens.lg ? 'April 2012' : null,
                 dot: <ToolOutlined />,
             },
             "EE": {
                 children: getItemButton(id),
-                label: 'September 2007',
+                label: screens.lg ? 'September 2007' : null,
                 dot: <ClockCircleOutlined />,
             },
             "CA": {
                 children: getItemButton(id),
-                label: 'August 2007',
+                label: screens.lg ? 'August 2007' : null,
                 dot: <RocketTwoTone />,
             },
             "BD": {
                 children: getItemButton(id),
-                label: '2005-07',
+                label: screens.lg ? '2005-07' : null,
                 color: 'green'
             }
         };
@@ -118,7 +119,7 @@ function WorkTimeline() {
                 <Timeline
                     pending="Looking for a new role.."
                     reverse={true}
-                    mode="right"
+                    mode={screens.lg ? "right" : "left"}
                     items={reversedItems} />
                 <Drawer
                     width="50%"
@@ -138,15 +139,27 @@ function WorkTimeline() {
 
     return (
         <>
-            {screens.lg ?
-                <Card style={{ width: "70vw" }} size="small" title="My Experience">
+            {screens.lg &&
+                <Card style={{ width: "72vw" }} size="small" title="My Experience">
                     {getTimelineContent()}
-                </Card> :
+                </Card>
+            }
+
+
+            {/*smaller screen, sider is closed by default*/
+                !screens.lg && siderCollapsed &&
                 <Card style={{ width: "90vw" }} size="small" title="My Experience">
                     {getTimelineContent()}
                 </Card>
             }
 
+
+            {/*smaller screen, when sider is opened manually*/
+                !screens.lg && !siderCollapsed &&
+                <Card style={{ width: "65vw" }} size="small" title="My Experience">
+                    {getTimelineContent()}
+                </Card>
+            }
         </>
     );
 };

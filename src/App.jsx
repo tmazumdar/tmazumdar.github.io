@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
     Layout,
     Space,
@@ -12,9 +13,9 @@ import './App.css'
 const { Content } = Layout;
 
 function App() {
-
+    const [siderCollapsed, setSiderCollapsed] = useState(false);
     const contentStyle = {
-        padding: '20px',
+        padding: '10px',
         backgroundColor: 'darkgray',
     };
 
@@ -24,13 +25,13 @@ function App() {
 
     return (
         <Layout style={layoutStyle}>
-            <LeftSider></LeftSider>
+            <LeftSider setCollapsed={setSiderCollapsed}></LeftSider>
             <Layout>
                 <Content style={contentStyle}>
                     <Space direction="vertical" size="small">
                         <SkillsSection></SkillsSection>
                         <ResumeSection></ResumeSection>
-                        <WorkTimeline></WorkTimeline>
+                        <WorkTimeline siderCollapsed={siderCollapsed}></WorkTimeline>
                     </Space>
                 </Content>
                 <FooterSection></FooterSection>
