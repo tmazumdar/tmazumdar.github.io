@@ -19,7 +19,6 @@ function LeftSider({ setCollapsed }) {
     };
 
     const siderCallback = (collapsed, type) => {
-        console.log(collapsed, type);
         setCollapsed(collapsed);
     };
 
