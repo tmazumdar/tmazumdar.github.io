@@ -21,7 +21,7 @@ const tabList = [
 const contentList = {
     tab1:
         <Space>
-            <Button href="https://docs.google.com/document/d/1ePpkumoyrnXwdIs4CazE6AxKMF0ma8O-2SiPZzjyBeQ/edit?usp=sharing">
+            <Button href="https://docs.google.com/document/d/1wDzh3E8dfQIYLnjVI-D4BzAYiA4sEgYx/edit?usp=sharing&ouid=118446516302800512713&rtpof=true&sd=true">
                 <FileSearchOutlined />
                 View
             </Button>
@@ -32,7 +32,7 @@ const contentList = {
         </Space>,
     tab2:
         <Space>
-            <Button href="https://drive.google.com/file/d/1yhvB8RX_XoUEb-1ScqmyC-Rx2m6m5h-V/view?usp=sharing">
+            <Button href="https://drive.google.com/file/d/1yhvB8RX_XoUEb-1ScqmyC-Rx2m6m5h-V/view">
                 <FileSearchOutlined />
                 View
             </Button>
