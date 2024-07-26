@@ -1,8 +1,9 @@
-import { Card, Space, Tooltip } from 'antd';
+import { Button, Card, Space, Tooltip } from 'antd';
 import {
     AmazonOutlined,
     ConsoleSqlOutlined,
     DotNetOutlined,
+    GithubOutlined,
     Html5Outlined,
     JavaScriptOutlined,
     PythonOutlined,
@@ -11,24 +12,41 @@ import {
 function SkillsSection() {
     return (
         <Card title="My Skills">
-            <Space>
-                <Tooltip title="JavaScript, AngularJS, ReactJS">
-                    <JavaScriptOutlined style={{ fontSize: "20px" }} />
+            <Space size="large" wrap={true}>
+                <Tooltip title="JavaScript, AngularJS, ReactJS, NodeJS">
+                    <Button type="dashed" shape="circle" size="large">
+                        <JavaScriptOutlined style={{ fontSize: "20px" }} />
+                    </Button>
                 </Tooltip>
                 <Tooltip title="HTML, CSS">
-                    <Html5Outlined style={{ fontSize: "20px" }} />
+                    <Button type="dashed" shape="circle" size="large">
+                        <Html5Outlined style={{ fontSize: "20px" }} />
+                    </Button>
                 </Tooltip>
-                <Tooltip title=".NET, C#, WCF">
-                    <DotNetOutlined style={{ fontSize: "36px" }} />
+                <Tooltip title=".NET, C#, WCF, Azure DevOps">
+                    <Button type="dashed" shape="circle" size="large">
+                        <DotNetOutlined style={{ fontSize: "32px" }} />
+                    </Button>
                 </Tooltip>
                 <Tooltip title="Python">
-                    <PythonOutlined style={{ fontSize: "20px" }} />
+                    <Button type="dashed" shape="circle" size="large">
+                        <PythonOutlined style={{ fontSize: "20px" }} />
+                    </Button>
                 </Tooltip>
                 <Tooltip title="SQL, LINQ">
-                    <ConsoleSqlOutlined style={{ fontSize: "20px" }} />
+                    <Button type="dashed" shape="circle" size="large">
+                        <ConsoleSqlOutlined style={{ fontSize: "20px" }} />
+                    </Button>
                 </Tooltip>
                 <Tooltip title="AWS EC2">
-                    <AmazonOutlined style={{ fontSize: "20px" }} />
+                    <Button type="dashed" shape="circle" size="large">
+                        <AmazonOutlined style={{ fontSize: "20px" }} />
+                    </Button>
+                </Tooltip>
+                <Tooltip title="Git, Github Actions, Github Pages">
+                    <Button type="dashed" shape="circle" size="large">
+                        <GithubOutlined style={{ fontSize: "20px" }} />
+                    </Button>
                 </Tooltip>
             </Space>
         </Card>

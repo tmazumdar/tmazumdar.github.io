@@ -38,7 +38,7 @@ function WorkTimeline({ siderCollapsed }) {
     const getItemButton = (id) => {
         const data = getExperience();
         return (
-            <Button type="link" size="small" onClick={() => showDrawer(data[id].drawer)}>
+            <Button type="dashed" size="small" onClick={() => showDrawer(data[id].drawer)}>
                 {data[id].description}
             </Button>
         );
@@ -140,7 +140,7 @@ function WorkTimeline({ siderCollapsed }) {
     return (
         <>
             {screens.lg &&
-                <Card style={{ width: "72vw" }} size="small" title="My Experience">
+                <Card style={{ width: "70vw" }} size="small" title="My Experience">
                     {getTimelineContent()}
                 </Card>
             }
