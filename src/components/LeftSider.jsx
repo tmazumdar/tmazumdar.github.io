@@ -28,7 +28,6 @@ function LeftSider({ setCollapsed }) {
                 <Text
                     strong
                     style={{
-                        margin: 0,
                         color: "white",
                         fontSize: fontSize * 2
                     }}

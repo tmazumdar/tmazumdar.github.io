@@ -8,7 +8,6 @@ import LeftSider from './components/LeftSider.jsx';
 import ResumeSection from './components/ResumeSection.jsx';
 import SkillsSection from './components/SkillsSection.jsx';
 import WorkTimeline from './components/WorkTimeline.jsx';
-import './App.css'
 
 const { Content } = Layout;
 
@@ -21,6 +20,7 @@ function App() {
 
     const layoutStyle = {
         borderRadius: 4,
+        height: '100vh'
     };
 
     return (
