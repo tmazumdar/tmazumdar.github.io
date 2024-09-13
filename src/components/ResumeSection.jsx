@@ -21,22 +21,22 @@ const tabList = [
 const contentList = {
     tab1:
         <Space>
-            <Button href="https://docs.google.com/document/d/1wDzh3E8dfQIYLnjVI-D4BzAYiA4sEgYx/edit?usp=sharing&ouid=118446516302800512713&rtpof=true&sd=true">
+            <Button size="small" href="https://docs.google.com/document/d/1wDzh3E8dfQIYLnjVI-D4BzAYiA4sEgYx/edit?usp=sharing&ouid=118446516302800512713&rtpof=true&sd=true">
                 <FileSearchOutlined />
                 View
             </Button>
-            <Button href="TM-R.docx" download>
+            <Button size="small" href="TM-R.docx" download>
                 <DownloadOutlined />
                 Download
             </Button>
         </Space>,
     tab2:
         <Space>
-            <Button href="https://drive.google.com/file/d/1yhvB8RX_XoUEb-1ScqmyC-Rx2m6m5h-V/view">
+            <Button size="small" href="https://drive.google.com/file/d/1yhvB8RX_XoUEb-1ScqmyC-Rx2m6m5h-V/view">
                 <FileSearchOutlined />
                 View
             </Button>
-            <Button href="TM-5S2.pdf" download>
+            <Button size="small" href="TM-5S2.pdf" download>
                 <DownloadOutlined />
                 Download
             </Button>

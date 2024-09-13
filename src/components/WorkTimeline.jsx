@@ -94,7 +94,8 @@ function WorkTimeline({ siderCollapsed }) {
         return items[id];
     };
 
-    const items = ["FREE", "YELP", "MAK", "CDK", "UW", "EE", "CA", "BD"].map(getItems);
+    //const items = ["FREE", "YELP", "MAK", "CDK", "UW", "EE", "CA", "BD"].map(getItems);
+    const items = ["YELP", "MAK", "CDK", "UW", "EE", "BD"].map(getItems);
     var reversedItems = items.reverse();
 
     const getDrawerWebTitle = (drawer) => {
@@ -103,7 +104,8 @@ function WorkTimeline({ siderCollapsed }) {
                 return (
                     <>
                         <br /><a href={drawer.web}>{drawer.web}</a>
-                    </>);
+                    </>
+                );
         }
         return (
             <>
@@ -137,30 +139,20 @@ function WorkTimeline({ siderCollapsed }) {
         );
     };
 
+    const getScreenWidth = () => {
+        if (screens.lg) {
+            return "70vw";
+        } else if (!screens.lg && siderCollapsed) {
+            return "90vw";
+        } else if (!screens.lg && !siderCollapsed) {
+            return "65vw";
+        }
+    };
+
     return (
-        <>
-            {screens.lg &&
-                <Card style={{ width: "70vw" }} size="small" title="My Experience">
-                    {getTimelineContent()}
-                </Card>
-            }
-
-
-            {/*smaller screen, sider is closed by default*/
-                !screens.lg && siderCollapsed &&
-                <Card style={{ width: "90vw" }} size="small" title="My Experience">
-                    {getTimelineContent()}
-                </Card>
-            }
-
-
-            {/*smaller screen, when sider is opened manually*/
-                !screens.lg && !siderCollapsed &&
-                <Card style={{ width: "65vw" }} size="small" title="My Experience">
-                    {getTimelineContent()}
-                </Card>
-            }
-        </>
+        <Card style={{ width: getScreenWidth() }} title="My Experience">
+            {getTimelineContent()}
+        </Card>
     );
 };
 
