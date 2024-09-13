@@ -17,6 +17,7 @@ function FooterSection() {
         color: '#fff',
         backgroundColor: 'gray',
         fontSize: '10px',
+        zIndex: 99
     };
 
     return (

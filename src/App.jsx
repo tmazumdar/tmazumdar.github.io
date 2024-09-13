@@ -16,6 +16,7 @@ function App() {
     const contentStyle = {
         padding: '10px',
         backgroundColor: 'darkgray',
+        overflowY: 'auto'
     };
 
     const layoutStyle = {
