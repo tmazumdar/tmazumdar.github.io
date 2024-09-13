@@ -1,30 +1,38 @@
 ﻿var getExperience = () => {
     return {
-    "FREE": {
-            description: "Started Freelancing",
+        "FREE": {
+                description: "Started Freelancing",
+                drawer: {
+                    title: "Freelancer",
+                    time: "January 2024 - Present",
+                    description: `I built a desktop app to track & plot stocks and ETFs. 
+                    I used Electron, React, Typescript, DaisyUI, TailwindCSS, ChartJS & Polygon API.
+                    I am also assisting my partner with logistics to startup her own bakery business 
+                    in Kitchener-Waterloo/Cambridge.`
+                }
+        },
+        "TRIP": {
+                description: "Joined Trip Ninja",
+                drawer: {
+                    title: "Squad Lead / Software Developer",
+                    time: "Feb 2025 - Present",
+                    description: ``
+                }
+        },
+        "YELP": {
+            description: "Joined Yelp",
             drawer: {
-                title: "Freelancer",
-                time: "January 2024 - Present",
-                description: `I built a desktop app to track & plot stocks and ETFs. 
-                I used Electron, React, Typescript, DaisyUI, TailwindCSS, ChartJS & Polygon API.
-                I am also assisting my partner with logistics to startup her own bakery business 
-                in Kitchener-Waterloo/Cambridge.`
+                title: "Senior Software Engineer",
+                time: "August 2021 - January 2024",
+                description: `I was a senior enginer on the Market Fit (Growth) team at Yelp.
+                The role involved leading projects, experimenting on user activity metrics
+                (e.g. page views, clicks) on Yelp's website.
+                I mentored junior engineers with code reviews, 1-on-1s and feedback during design &
+                implementation
+                I also got to work with Python micro-services which was a shift in tech stack from my prior experiences`,
+                web: "www.yelp.ca"
             }
-    },
-    "YELP": {
-        description: "Joined Yelp",
-        drawer: {
-            title: "Senior Software Engineer",
-            time: "August 2021 - January 2024",
-            description: `I was a senior enginer on the Market Fit (Growth) team at Yelp.
-            The role involved leading projects, experimenting on user activity metrics
-            (e.g. page views, clicks) on Yelp's website.
-            I mentored junior engineers with code reviews, 1-on-1s and feedback during design &
-            implementation
-            I also got to work with Python micro-services which was a shift in tech stack from my prior experiences`,
-            web: "www.yelp.ca"
-        }
-    },
+        },
         "MAK": {
             description: "Joined MAK Consulting",
             drawer: {

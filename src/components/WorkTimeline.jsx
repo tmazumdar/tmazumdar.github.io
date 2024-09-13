@@ -52,6 +52,12 @@ function WorkTimeline({ siderCollapsed }) {
                 color: 'green',
                 dot: <LaptopOutlined />,
             },
+            "TRIP": {
+                children: getItemButton(id),
+                label: screens.lg ? 'February 2025' : null,
+                color: 'gray',
+                dot: <LaptopOutlined />,
+            },
             "YELP": {
                 children: getItemButton(id),
                 label: screens.lg ? 'August 2021' : null,
@@ -95,7 +101,7 @@ function WorkTimeline({ siderCollapsed }) {
     };
 
     //const items = ["FREE", "YELP", "MAK", "CDK", "UW", "EE", "CA", "BD"].map(getItems);
-    const items = ["YELP", "MAK", "CDK", "UW", "EE", "BD"].map(getItems);
+    const items = ["TRIP", "YELP", "MAK", "CDK", "UW", "EE", "BD"].map(getItems);
     var reversedItems = items.reverse();
 
     const getDrawerWebTitle = (drawer) => {
@@ -119,7 +125,7 @@ function WorkTimeline({ siderCollapsed }) {
         return (
             <div style={containerStyle}>
                 <Timeline
-                    pending="Looking for a new role.."
+                    //pending="Looking for a new role.."
                     reverse={true}
                     mode={screens.lg ? "right" : "left"}
                     items={reversedItems} />
