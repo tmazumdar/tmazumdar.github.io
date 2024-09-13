@@ -26,7 +26,6 @@ function FooterSection() {
                 <Flex justify="space-between">
                     <Flex vertical>
                         <Flex>Copyright&nbsp;<CopyrightOutlined />&nbsp;2024 Tahsin Mazumdar</Flex>
-                        <Flex>t: +1 519 721 2323</Flex>
                         <Flex>e:&nbsp;<a style={{ color: "white" }} href="mailto:tahsin.mazumdar@gmail.com"> tahsin.mazumdar@gmail.com</a></Flex>
                     </Flex>
                     <Flex justify="space-evenly" vertical>
